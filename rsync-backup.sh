@@ -28,7 +28,7 @@ if [ -d "$dst/backup.1" ]; then
   cp -al "$dst/backup.1" "$dst/backup.0"
 fi
 
-rsync -av --delete $src "$dst/backup.0/"
+rsync -ave ssh --delete $src "$dst/backup.0/"
 rm -f "$dst/backup.0/date.txt"  # break hard link
 date > "$dst/backup.0/date.txt"
 
