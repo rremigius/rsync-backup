@@ -1,6 +1,12 @@
 # rsync-backup
 Creates a backup of a directory, with incremental hard-link copies up to any number of times.
 
+## Overview
+
+- Fast incremental backups using Rsync.
+- Multiple backups with the same command (cronjob-friendly).
+- Preserves disk space using hard links from older backups.
+
 ## Usage
 
 ```bash
